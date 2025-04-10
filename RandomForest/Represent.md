@@ -1,0 +1,2 @@
+# Random Forest
+An algorithm used for both **classification** and **regression** tasks. It consists of multiple decision trees. This is why it called 'Forest'. Compare to decision tree, Random Forest has more accurate and stable since it ensemble of trees outputs and give the best choice.
