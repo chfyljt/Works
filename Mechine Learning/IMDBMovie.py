@@ -18,7 +18,7 @@ pd.set_option('display.max_colwidth', None)
 # path = kagglehub.dataset_download("adilshamim8/nlp-task")
 
 # Load dataset
-data_path ='C:/Users/v-juntaoli/.cache/kagglehub/datasets/adilshamim8/nlp-task/versions/1'
+data_path =''
 movies_genres = pd.read_csv(data_path + '/movies_genres.csv')
 movies_overview = pd.read_csv(data_path + '/movies_overview.csv')
 
