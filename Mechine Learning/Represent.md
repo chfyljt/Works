@@ -17,6 +17,7 @@ For Classification:
     'y^​=mode(T1​(x),T2​(x),…,T100​(x))'
 
 ## Code
+'''python
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
