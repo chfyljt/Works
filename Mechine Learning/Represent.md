@@ -17,8 +17,7 @@ For Classification:
     'y^​=mode(T1​(x),T2​(x),…,T100​(x))'
 
 ## Code
-···python
-from sklearn.datasets import load_iris
+'from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
@@ -43,4 +42,4 @@ feature_names = data.feature_names
 
 print("Feature Importances:")
 for feature, importance in zip(feature_names, importances):
-    print(f"{feature}: {importance:.4f}")
+    print(f"{feature}: {importance:.4f}")'
