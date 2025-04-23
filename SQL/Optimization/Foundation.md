@@ -8,7 +8,7 @@ WHERE order_date BETWEEN '2022-01-01' AND '2022-03-31'
 AND customer_city = 'New York'
 GROUP BY customer_id
 ORDER BY Total DESC;
-
+```
 ### The order of execution 
  **FROM** --> **WHERE** --> **GROUP BY** --> **SELECT** --> **ORDER BY**
 
