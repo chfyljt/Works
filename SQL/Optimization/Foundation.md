@@ -13,6 +13,6 @@ ORDER BY Total DESC;
  **FROM** --> **WHERE** --> **GROUP BY** --> **SELECT** --> **ORDER BY**
 
  ## 1. FROM Clause
-**Where SQL begins processing a query**
+### Where SQL begins processing a query
 <p1>**Table and Subquery Processing:** The data from the specified table(s) is fetched first. They are evaluated during this step if subqueries exist.
  
