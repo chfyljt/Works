@@ -14,5 +14,5 @@ ORDER BY Total DESC;
 
  ## 1. FROM Clause
 **Where SQL begins processing a query**
-
+**Table and Subquery Processing:** The data from the specified table(s) is fetched first. They are evaluated during this step if subqueries exist.
  
