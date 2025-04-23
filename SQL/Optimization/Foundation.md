@@ -14,8 +14,9 @@ ORDER BY Total DESC;
 
  ## 1. FROM Clause
 ### Where SQL begins processing a query
-**Table and Subquery Processing:** The data from the specified table(s) is fetched first. They are evaluated during this step if subqueries exist.
+<ul>
+<li>**Table and Subquery Processing:** The data from the specified table(s) is fetched first. They are evaluated during this step if subqueries exist.</li>
 **JOIN Operations:** Generally, the JOIN operation is part of the **FROM** clause.
 **Data Preparation:** This step creates a smaller, intermediate dataset for further processing in subsequent clause.
 **Temporary Tables:** SQL may create temporary tables internally for handling complex operations.
- 
+</ul>
