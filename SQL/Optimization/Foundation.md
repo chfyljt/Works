@@ -1,6 +1,7 @@
 # Order of Execution of SQL Queries
 ## Instance
 Say, there is a SQL query instance:
+```sql
 SELECT customer_ID, SUM(total_amount) AS "Total"
 FROM orders
 WHERE order_date BETWEEN '2022-01-01' AND '2022-03-31'
