@@ -43,3 +43,6 @@ The SELECT clause is executed after the GROUP BY and HAVING clauses. This is whe
 
 ## 6. DISTINCT Clause
 It is executed after expressions and aliases in the SELECT clause. Its primary purpose is to filter out duplicate rows, ensuring the final output contains only unique rows. 
+
+## 7. ORDER BY Clause
+After all previous clauses have been executed, the ORDER BY clause is used to sort the final result set. It organizes the data based on specified column(s) in either ascending(default) or descending order. Sorting is performed based on the first specified column, and if there are duplicates, the second column is used for further sorting, and so on.
