@@ -46,3 +46,8 @@ It is executed after expressions and aliases in the SELECT clause. Its primary p
 
 ## 7. ORDER BY Clause
 After all previous clauses have been executed, the ORDER BY clause is used to sort the final result set. It organizes the data based on specified column(s) in either ascending(default) or descending order. Sorting is performed based on the first specified column, and if there are duplicates, the second column is used for further sorting, and so on.
+
+## 8. LIMIT/OFFSET Clause
+Finally, after the data is ordered, the LIMIT and OFFSET clauses are applied to restrict the number of rows returned.
+<li><strong>LIMIT:</strong> Specifies the maximum number of rows to return.</li>
+<li><strong>OFFSET:</strong> Skips the specified number of rows before beginning to return the result set.</li>
