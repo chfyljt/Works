@@ -29,3 +29,9 @@ It is executed after filtering (via the WHERE clause). This step organizes the d
 <li><strong>Data Grouping:</strong> Rows with the same value in the <strong>GROUP BY</strong> column are grouped together.</li>
 <li><strong>Row Reduction:</strong> The number of rows is reduced to match the number of unique values in the grouping column(s).</li>
 <li><strong>Aggregate Functions:</strong> Aggregate calculations like <strong>SUM, AVG, COUNT</strong>, etc., are applied to each group to produce meaningful insights.</li>
+
+## 4. HAVING Clause
+It plays a similar role to the WHERE clause, but specifically filters the grouped data created by GROUP BY.
+<li><strong>Purpose:</strong> It applies conditions to aggregated results rather than individual rows.</li>
+<li><strong>Filtering Groups:</strong> Groups that don't meet the specified condition are excluded, reducing the data further for subsequent operations.</li>
+<li><strong>Difference from WHERE:</strong> WHERE filters rows before grouping, while HAVING filters groups after aggregation.</li>
