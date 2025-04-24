@@ -12,7 +12,7 @@ ORDER BY Total DESC;
 ### The order of execution 
  **FROM** --> **WHERE** --> **GROUP BY** --> **SELECT** --> **ORDER BY**
 
- ## 1. FROM Clause
+## 1. FROM Clause
 ### Where SQL begins processing a query
 <ul>
 <li><strong>Table and Subquery Processing:</strong> The data from the specified table(s) is fetched first. They are evaluated during this step if subqueries exist.</li>
@@ -20,3 +20,6 @@ ORDER BY Total DESC;
 <li><strong>Data Preparation:</strong> This step creates a smaller, intermediate dataset for further processing in subsequent clause.</li>
 <li><strong>Temporary Tables:</strong> SQL may create temporary tables internally for handling complex operations.</li>
 </ul>
+
+## 2. WHERE Clause
+<li><strong>WHERE</strong> clause discards rows that don’t satisfy the conditions, thus reducing the rows of data that need to be processed further in other clauses.</li>
