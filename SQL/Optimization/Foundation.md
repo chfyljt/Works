@@ -26,6 +26,6 @@ ORDER BY Total DESC;
 
 ## 3. GROUP BY Clause
 It is executed after filtering (via the WHERE clause). This step organizes the data into groups based on the <strong>distinct values</strong> in the specified column(s).
-<li><strong>Data Grouping:</strong></li> Rows with the same value in the <strong>GROUP BY</strong> column are grouped together.
-<li><strong>Row Reduction:</strong></li> The number of rows is reduced to match the number of unique values in the grouping column(s).
-<li><strong>Aggregate Functions:</strong></li> Aggregate calculations like <strong>SUM, AVG, COUNT</strong>, etc., are applied to each group to produce meaningful insights.
+<li><strong>Data Grouping:</strong> Rows with the same value in the <strong>GROUP BY</strong> column are grouped together.</li>
+<li><strong>Row Reduction:</strong> The number of rows is reduced to match the number of unique values in the grouping column(s).</li>
+<li><strong>Aggregate Functions:</strong> Aggregate calculations like <strong>SUM, AVG, COUNT</strong>, etc., are applied to each group to produce meaningful insights.</li>
