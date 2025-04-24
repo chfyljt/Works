@@ -40,3 +40,6 @@ It plays a similar role to the WHERE clause, but specifically filters the groupe
 The SELECT clause is executed after the GROUP BY and HAVING clauses. This is where the actual data to be displayed is defined.
 <li><strong>Purpose:</strong> It computes expressions such as aggregate functions(e.g., SUM, COUNT), or custom calculations.</li>
 <li><strong>Optimized Execution:</strong> By this stage, filtering and grouping operations have significantly reduced the dataset size, ensuring computations are efficient and focused only on the relevant data.</li>
+
+## 6. DISTINCT Clause
+It is executed after expressions and aliases in the SELECT clause. Its primary purpose is to filter out duplicate rows, ensuring the final output contains only unique rows. 
