@@ -35,3 +35,8 @@ It plays a similar role to the WHERE clause, but specifically filters the groupe
 <li><strong>Purpose:</strong> It applies conditions to aggregated results rather than individual rows.</li>
 <li><strong>Filtering Groups:</strong> Groups that don't meet the specified condition are excluded, reducing the data further for subsequent operations.</li>
 <li><strong>Difference from WHERE:</strong> WHERE filters rows before grouping, while HAVING filters groups after aggregation.</li>
+
+## 5. SELECT Clause
+The SELECT clause is executed after the GROUP BY and HAVING clauses. This is where the actual data to be displayed is defined.
+<li><strong>Purpose:</strong> It computes expressions such as aggregate functions(e.g., SUM, COUNT), or custom calculations.</li>
+<li><strong>Optimized Execution:</strong> By this stage, filtering and grouping operations have significantly reduced the dataset size, ensuring computations are efficient and focused only on the relevant data.</li>
