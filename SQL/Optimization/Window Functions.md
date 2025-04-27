@@ -20,7 +20,7 @@ Say, below is an employee table
 | Pradeep     | 22          | Sales         | 20000
 
 ## Aggregate
-Aggregate window functions calculate aggregates over a window of rows while retaining individual rows. These include SUM(), AVG(), COUNT(), MAX(), and MIN().
+Aggregate window functions calculate aggregates over a window of rows while retaining individual rows. These include **SUM(), AVG(), COUNT(), MAX(), and MIN()**.
 ```
 SELECT Name, Age, Department, Salary, 
  AVG(Salary) OVER( PARTITION BY Department) AS Avg_Salary
