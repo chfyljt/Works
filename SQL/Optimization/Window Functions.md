@@ -7,3 +7,9 @@ window_function(column_name2)
 OVER([PARTITION BY column_name1] [ORDER BY column_name3]) AS new_column
 FROM table_name;
 ```
+SQL window functions can be categorized into primary types: aggregate and ranking.
+***Aggregate
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
