@@ -9,6 +9,7 @@ FROM table_name;
 ```
 The **OVER** clause is key to defining this window. It partitions the data into different sets (using the PARTITION BY clause) 
 and orders them (using the ORDER BY clause).
+
 **window functions** can be categorized into primary types: **aggregate** and **ranking**.
 Say, below is an employee table
 
