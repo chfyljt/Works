@@ -8,9 +8,10 @@ OVER([PARTITION BY column_name1] [ORDER BY column_name3]) AS new_column
 FROM table_name;
 ```
 The **OVER** clause is key to defining this window. It partitions the data into different sets (using the PARTITION BY clause) 
-and orders them (using the ORDER BY clause).
+and orders them (using the ORDER BY clause). These windows enable functions like SUM(), AVG(), ROW_NUMBER(), RANK(), and DENSE_RANK() 
+to be applied in a sophisticated manner.
 
-**window functions** can be categorized into primary types: **aggregate** and **ranking**.
+**Window functions** can be categorized into primary types: **aggregate** and **ranking**.
 Say, below is an employee table
 
 | Name        | Age         | Department    | Salary|
@@ -22,7 +23,8 @@ Say, below is an employee table
 | Pradeep     | 22          | Sales         | 20000
 
 ## Aggregate
-Aggregate window functions calculate aggregates over a window of rows while retaining individual rows. These include **SUM(), AVG(), COUNT(), MAX(), and MIN()**.
+Aggregate window functions calculate aggregates over a window of rows while retaining individual rows. 
+These include **SUM(), AVG(), COUNT(), MAX(), and MIN()**.
 ```
 SELECT Name, Age, Department, Salary, 
  AVG(Salary) OVER( PARTITION BY Department) AS Avg_Salary
@@ -38,4 +40,17 @@ SELECT Name, Age, Department, Salary,
 
 ## Ranking
 ### 1. RANK() Function
-
+The RANK() function assigns ranks to rows within a partition, with the same rank given to rows with identical values. 
+If two rows share the same rank, the next rank is skipped.
+```
+SELECT Name, Department, Salary,
+       RANK() OVER(PARTITION BY Department ORDER BY Salary DESC) AS emp_rank
+FROM employee;
+```
+| Name        |  Department    | Salary | emp_rank|
+| :----:      |    :----:      | :----: | :----:|
+| Ramesh      |  Finance       | 50000  |  1
+| Suresh      |  Finance       | 50000  |  1
+| Ram         |  Finance       | 20000  |  3
+| Deep        |  Sales         | 30000  |  1
+| Pradeep     |  Sales         | 20000  |  2
