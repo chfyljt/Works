@@ -9,7 +9,7 @@ FROM table_name;
 ```
 SQL window functions can be categorized into primary types: **aggregate** and **ranking**.
 
-##Aggregate
+## Aggregate
 | Syntax      | Description | Test Text     |
 | :---        |    :----:   |          ---: |
 | Header      | Title       | Here's this   |
