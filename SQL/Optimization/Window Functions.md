@@ -56,4 +56,33 @@ FROM employee;
 | Pradeep     |  Sales         | 20000  |  2
 
 ### 2. DENSE_RANK()
+It assigns rank to each row within partition like rank(). The difference between RANK() and DENSE_RANK() is that in DENSE_RANK(), 
+for the next rank after same rank, consecutive integer is used, no rank is skipped.
+```
+SELECT Name, Department, Salary,
+       DENSE_RANK() OVER(PARTITION BY Department ORDER BY Salary DESC) AS emp_dense_rank
+FROM employee;
+```
+| Name        |  Department    | Salary | emp_dense_rank|
+| :----:      |    :----:      | :----: | :----:|
+| Ramesh      |  Finance       | 50000  |  1
+| Suresh      |  Finance       | 50000  |  1
+| Ram         |  Finance       | 20000  |  2
+| Deep        |  Sales         | 30000  |  1
+| Pradeep     |  Sales         | 20000  |  2
 
+### 3. ROW_NUMBER()
+ROW_NUMBER() gives e­ach row a unique number. It numbers rows from one­ to the total rows. The rows are put into groups base­d on their values.
+Each group is called a partition. In e­ach partition, rows get numbers one afte­r another. No two rows have the same­ number in a partition.
+```
+SELECT Name, Department, Salary,
+       ROW_NUMBER() OVER(PARTITION BY Department ORDER BY Salary DESC) AS emp_row_no
+FROM employee;
+```
+| Name        |  Department    | Salary | emp_row_no|
+| :----:      |    :----:      | :----: | :----:|
+| Ramesh      |  Finance       | 50000  |  1
+| Suresh      |  Finance       | 50000  |  2
+| Ram         |  Finance       | 20000  |  3
+| Deep        |  Sales         | 30000  |  1
+| Pradeep     |  Sales         | 20000  |  2
