@@ -39,7 +39,7 @@ SELECT Name, Age, Department, Salary,
 | Pradeep     | 22          | Sales         | 20000  |  25000
 
 ## Ranking
-### 1. RANK() Function
+### 1. RANK()
 The RANK() function assigns ranks to rows within a partition, with the same rank given to rows with identical values. 
 If two rows share the same rank, the next rank is skipped.
 ```
@@ -54,3 +54,6 @@ FROM employee;
 | Ram         |  Finance       | 20000  |  3
 | Deep        |  Sales         | 30000  |  1
 | Pradeep     |  Sales         | 20000  |  2
+
+### 2. DENSE_RANK()
+
