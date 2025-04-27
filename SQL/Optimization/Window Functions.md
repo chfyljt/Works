@@ -8,10 +8,10 @@ OVER([PARTITION BY column_name1] [ORDER BY column_name3]) AS new_column
 FROM table_name;
 ```
 SQL window functions can be categorized into primary types: **aggregate** and **ranking**.
-| Name        | Age         | Department     | Salary|
-| :---        |    :----:   |          ---: |   ---: |
-| Name        | Title       | Here's this   |
-| Paragraph   | Text        | And more      |
+| Name        | Age         | Department    | Salary|
+| :----:      |    :----:   |     :----:    | :----:|
+| Ramesh      | 20       | Finance   |   50000
+| Suresh      | 22        | Finance      | 50000
 
 ## Aggregate
 
