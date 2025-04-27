@@ -1,7 +1,14 @@
 **Window Functions** allow us to perform calulations across a specific set of rows related to the current row. They enable calculations across a specific set of rows, 
 known as a “window,” while retaining the individual rows in the dataset. Unlike traditional aggregate functions that summarize data for the entire group, 
 window functions allow detailed calculations for specific partitions or subsets of data.
-
+```
+SELECT column_name1,
+window_function(column_name2)
+OVER([PARTITION BY column_name1] [ORDER BY column_name3]) AS new_column
+FROM table_name;
+```
+The **OVER** clause is key to defining this window. It partitions the data into different sets (using the PARTITION BY clause) 
+and orders them (using the ORDER BY clause).
 **window functions** can be categorized into primary types: **aggregate** and **ranking**.
 Say, below is an employee table
 
@@ -29,13 +36,5 @@ SELECT Name, Age, Department, Salary,
 | Pradeep     | 22          | Sales         | 20000  |  25000
 
 ## Ranking
-```
-SELECT column_name1,
-window_function(column_name2)
-OVER([PARTITION BY column_name1] [ORDER BY column_name3]) AS new_column
-FROM table_name;
-```
-The **OVER** clause is key to defining this window. It partitions the data into different sets (using the PARTITION BY clause) 
-and orders them (using the ORDER BY clause).
 ### 1. RANK() Function
 
