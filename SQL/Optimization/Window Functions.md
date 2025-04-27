@@ -7,11 +7,29 @@ window_function(column_name2)
 OVER([PARTITION BY column_name1] [ORDER BY column_name3]) AS new_column
 FROM table_name;
 ```
+
 SQL window functions can be categorized into primary types: **aggregate** and **ranking**.
+Say, below is an employee table
+
 | Name        | Age         | Department    | Salary|
 | :----:      |    :----:   |     :----:    | :----:|
-| Ramesh      | 20       | Finance   |   50000
-| Suresh      | 22        | Finance      | 50000
+| Ramesh      | 20          | Finance       | 50000
+| Suresh      | 22          | Finance       | 50000
+| Ram         | 28          | Finance       | 20000
+| Deep        | 25          | Sales         | 30000
+| Pradeep     | 22          | Sales         | 20000
 
 ## Aggregate
-
+Aggregate window functions calculate aggregates over a window of rows while retaining individual rows. These include SUM(), AVG(), COUNT(), MAX(), and MIN().
+```
+SELECT Name, Age, Department, Salary, 
+ AVG(Salary) OVER( PARTITION BY Department) AS Avg_Salary
+ FROM employee
+```
+| Name        | Age         | Department    | Salary | Avg_Salary|
+| :----:      |    :----:   |     :----:    | :----: | :----:|
+| Ramesh      | 20          | Finance       | 50000  |  40000
+| Suresh      | 22          | Finance       | 50000  |  40000
+| Ram         | 28          | Finance       | 20000  |  40000
+| Deep        | 25          | Sales         | 30000  |  25000
+| Pradeep     | 22          | Sales         | 20000  |  25000
