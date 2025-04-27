@@ -2,7 +2,7 @@
 known as a “window,” while retaining the individual rows in the dataset. Unlike traditional aggregate functions that summarize data for the entire group, 
 window functions allow detailed calculations for specific partitions or subsets of data.
 
-SQL window functions can be categorized into primary types: **aggregate** and **ranking**.
+**window functions** can be categorized into primary types: **aggregate** and **ranking**.
 Say, below is an employee table
 
 | Name        | Age         | Department    | Salary|
